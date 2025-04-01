@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  setup:
+    uses: ./.github/workflows/workflow-setup.yml
+
+  lint:
+    needs: setup
+    uses: ./.github/workflows/workflow-lint.yml
+
+  build:
+    needs: setup
+    uses: ./.github/workflows/workflow-build.yml
