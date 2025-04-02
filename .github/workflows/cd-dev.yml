@@ -1,0 +1,8 @@
+name: Deploy to Dev
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    uses: ./.github/workflows/workflow-docker.yml
