@@ -1,0 +1,11 @@
+name: Build and Deploy to Dev
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    uses: ./.github/workflows/workflow-docker.yml
+    secrets:
+      docker_username: ${{ secrets.DOCKER_USERNAME }}
+      docker_password: ${{ secrets.DOCKER_PASSWORD }}
