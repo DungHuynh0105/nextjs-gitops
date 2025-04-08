@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: nextjs-app
-          image: dunghuynh0105/nextjs-gitops:69495f830bda2932553a9aa2bf128cf2cdba05f2
+          image: dunghuynh0105/nextjs-gitops:08433fb735851085bc03f3ed6c87fbd6aec0b0d7
           ports:
             - containerPort: 3000
           imagePullPolicy: Always
