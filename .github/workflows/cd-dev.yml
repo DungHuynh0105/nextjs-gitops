@@ -9,3 +9,9 @@ jobs:
     secrets:
       docker_username: ${{ secrets.DOCKER_USERNAME }}
       docker_password: ${{ secrets.DOCKER_PASSWORD }}
+
+  update-image-tag:
+    needs: build-and-push
+    uses: ./.github/workflows/workflow-argocd.yml
+    secrets:
+      docker_username: ${{ secrets.DOCKER_USERNAME }}
